@@ -11,6 +11,7 @@ class FlashApp extends StatefulWidget {
   State<FlashApp> createState() => _FlashState();
 }
 
+// 주석을 달았습니다.
 class _FlashState extends State<FlashApp> {
   @override
   Widget build(BuildContext context) {
