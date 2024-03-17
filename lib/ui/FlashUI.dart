@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../component/single/button/FlashButton.dart';
+import '../component/single/margin/Crossmargin.dart';
 import '../component/single/slider/TempoSlider.dart';
 
 class FlashUI extends StatefulWidget {
@@ -12,24 +13,27 @@ class FlashUI extends StatefulWidget {
 
 class _FlashUIState extends State<FlashUI> {
   double _currentSliderValue = 20;
+  List GenreList = ["Ballad", "Dance", "EDM"];
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             FlashButton(
-              label: 'Ballad',
+              label: GenreList[0],
               onPressed: () {},
             ),
+            Crossmargin(),
             FlashButton(
-              label: 'Dance',
+              label: GenreList[1],
               onPressed: () {},
             ),
+            Crossmargin(),
             FlashButton(
-              label: 'EDM',
+              label: GenreList[2],
               onPressed: () {},
             )
           ],

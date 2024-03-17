@@ -22,10 +22,13 @@ class _TempoSliderState extends State<TempoSlider> {
 
   @override
   Widget build(BuildContext context) {
-    return Slider(
+    return SizedBox(
+        width: 200.0,
+        height: 100.0,
+      child : Slider(
       value: _currentSliderValue,
       max: 100,
-      divisions: 4,
+      divisions: 2,
       label: _currentSliderValue.round().toString(),
       onChanged: (double value) {
         setState(() {
