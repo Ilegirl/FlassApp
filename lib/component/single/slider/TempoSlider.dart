@@ -26,18 +26,19 @@ class _TempoSliderState extends State<TempoSlider> {
         width: 200.0,
         height: 100.0,
       child : Slider(
-      value: _currentSliderValue,
-      max: 100,
-      divisions: 2,
-      label: _currentSliderValue.round().toString(),
-      onChanged: (double value) {
-        setState(() {
-          _currentSliderValue = value;
-        });
-        if (widget.onChanged != null) {
-          widget.onChanged!(value);
-        }
-      },
+        value: _currentSliderValue,
+        max: 100,
+        divisions: 2,
+        label: _currentSliderValue.round().toString(),
+        onChanged: (double value) {
+          setState(() {
+            _currentSliderValue = value;
+          });
+          if (widget.onChanged != null) {
+            widget.onChanged!(value);
+          }
+        },
+      )
     );
   }
 }
